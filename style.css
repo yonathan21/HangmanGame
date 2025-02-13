@@ -6,3 +6,97 @@
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #5e63ba;
+}
+
+.container{
+  width: 850px;
+  background: white;
+  display: flex;
+  gap: 70px;
+  align-items: flex-end;
+  padding: 60px 40px;
+  border-radius: 10px;
+}
+
+.hangman-box img{
+  max-width: 270px;
+}
+
+.hangman-box h1{
+  font-size: 1.45rem;
+  margin-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.word-display{
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.word-display .letter{
+  width: 28px;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  border-bottom: 3px solid #000;
+}
+
+.word-display .letter.guessed{
+  border-color: transparent;
+  margin: -40px 0 35px;
+}
+
+.game-box h4{
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.game-box h4 b{
+  font-weight: 600;
+}
+
+.game-box .guesses-text b{
+  color:#ff0000;
+}
+
+.game-box .keyboard{
+  display: flex;
+  gap: 5px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.keyboard button {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  padding: 7px;
+  border: none;
+  background: #5e63ba;
+  border-radius: 4px;
+  text-transform: uppercase;
+  width: calc(100% / 9 - 5px);
+
+}
+
+.keyboard button:hover{
+  background: #8286c9;
+}
