@@ -1,3 +1,4 @@
+const hangmanImage = document.querySelector(".hangman-box img");
 const keyboardDiv = document.querySelector(".keyboard");
 const guessedText = document.querySelector(".guesses-text b");
 const wordDisplay = document.querySelector(".word-display");
@@ -23,8 +24,10 @@ const initGame = (button, clickedLetter) => {
     })
   }else{
     wrongGuessCount++;
+    hangmanImage.src = `images/hangman-${wrongGuessCount}.svg`;
   }
 
+  button.disabled = true;
   guessedText.innerText = `${wrongGuessCount} / ${maxGuessed}`;
 }
 

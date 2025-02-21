@@ -95,10 +95,15 @@ body{
   text-transform: uppercase;
   
 }
+
 .keyboard button {
   padding: 7px;
   width: calc(100% / 9 - 5px);
+}
 
+.keyboard button[disabled]{
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 :where(.game-modal, .keyboard) button:hover{
