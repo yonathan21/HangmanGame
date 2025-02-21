@@ -2,7 +2,9 @@ const keyboardDiv = document.querySelector(".keyboard");
 
 const getRandomWord = () => {
   const {word, hint} = wordList[Math.floor(Math.random() * wordList.length)];
-  console.log(word,hint);
+  console.log(word);
+
+  document.querySelector(".hint-text").innerText = hint;
 }
 
 for (let i = 97; i <= 122; i++){
